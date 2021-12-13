@@ -6,7 +6,7 @@ pipeline {
     }
     agent {
         docker {
-            image 'ubuntu'
+            image 'maven:3.8.1-adoptopenjdk-11'
         }
     }
     stages {
