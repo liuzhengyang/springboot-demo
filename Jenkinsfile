@@ -26,7 +26,7 @@ pipeline {
         stage('Deploy image') {
             steps {
                 script {
-                    docker.withRegistry( '', registryCredential ) {
+                    docker.withRegistry( 'http://hub-mirror.c.163.com', registryCredential ) {
                         dockerImage.push("$BUILD_NUMBER")
                         dockerImage.push('latest')
                     }
